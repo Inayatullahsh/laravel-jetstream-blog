@@ -1,3 +1,7 @@
+# My Files
+todo.md
+
+
 /node_modules
 /public/build
 /public/hot
@@ -14,3 +18,26 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+
+# Tailwind CSS
+/coverage
+/cli
+/lib
+/peers
+/example
+.DS_Store
+tailwind.config.js
+index.html
+yarn.lock
+yarn-error.log
+types/generated/*.d.ts
+
+# Perf related files
+isolate*.log
+
+# Generated files
+/src/corePluginList.js
+
+# Generated files during tests
+/tests/evaluate-tailwind-functions.test.html
