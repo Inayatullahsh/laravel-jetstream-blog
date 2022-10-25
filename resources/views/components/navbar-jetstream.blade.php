@@ -5,7 +5,7 @@
       <div class="flex">
         <!-- Logo -->
         <div class="flex shrink-0 items-center">
-          <a href="{{ route('dashboard') }}">
+          <a href="{{ route('home') }}">
             <x-jet-application-mark class="block h-9 w-auto" />
           </a>
         </div>
@@ -25,6 +25,28 @@
       </div>
 
       <div class="hidden sm:ml-6 sm:flex sm:items-center">
+        <!-- Sarch Field -->
+        <div>
+          <fieldset class="text-gray-700">
+            <label for="Search" class="hidden">Search</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                <button type="button" title="search" class="p-1 focus:outline-none focus:ring">
+                  <svg class="h-5 w-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+              </span>
+              <input type="search" name="Search" placeholder="Search..."
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 py-2 pl-10 text-sm text-gray-900 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 focus:dark:border-violet-400">
+            </div>
+          </fieldset>
+        </div>
+        <!-- Sarch Field end -->
+
         <!-- Teams Dropdown -->
         @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
           <div class="relative ml-3">
@@ -154,15 +176,15 @@
   <!-- Responsive Navigation Menu -->
   <div :class="{ 'block': open, 'hidden': !open }" class="hidden sm:hidden">
     <div class="space-y-1 pt-2 pb-3">
-      <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-        {{ __('Dashboard') }}
+      <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+        {{ __('Home') }}
       </x-jet-responsive-nav-link>
       <x-jet-responsive-nav-link href="{{ route('contact-us') }}" :active="request()->routeIs('contact-us')">
         {{ __('Contact Us') }}
       </x-jet-responsive-nav-link>
-      <x-jet-nav-link href="{{ route('search') }}" :active="request()->routeIs('search')">
+      <x-jet-responsive-nav-link href="{{ route('search') }}" :active="request()->routeIs('search')">
         {{ __('Search') }}
-      </x-jet-nav-link>
+      </x-jet-responsive-nav-link>
     </div>
 
     <!-- Responsive Settings Options -->
