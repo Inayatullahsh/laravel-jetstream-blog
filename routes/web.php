@@ -31,15 +31,15 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
-    // Post
-    // Route::resource('posts', PostController::class)
-    //     ->only(['index','show']);
-    Route::get('/', [PostController::class, 'index'])->name('home');
-    Route::get('/posts/{post}', [PostController::class, 'show'])->name('post-show');
-    Route::get('/posts/category/{category}', [CategoryController::class, 'show'])->name('category-show');
-
-    Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
-
-    Route::get('/search', [SearchController::class, 'index'])->name('search');
 });
+
+// Post
+// Route::resource('posts', PostController::class)
+//     ->only(['index','show']);
+Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('post-show');
+Route::get('/posts/category/{category}', [CategoryController::class, 'show'])->name('category-show');
+
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+
+Route::get('/search', [SearchController::class, 'index'])->name('search');

@@ -13,10 +13,10 @@
             </div>
           </a>
         </div>
-        @php
+        {{-- @php
           $post = App\Models\Post::find(1);
           $category = App\Models\Category::find(1);
-        @endphp
+        @endphp --}}
         <div class="mt-6 px-4 md:col-span-2">
           <p class="leading-normal">
             <a href="" class="text-base font-semibold text-indigo-600 underline">
@@ -24,8 +24,8 @@
             </a>
             <span class="pl-1 italic text-gray-500">wrote</span>
           </p>
-          <a href="{{ route('post-show', $post) }}"
-            class="mt-3 text-3xl font-semibold leading-snug text-gray-700 md:text-4xl">
+          {{-- <a href="{{ route('post-show', $post) }}" --}}
+          <a href="" class="mt-3 text-3xl font-semibold leading-snug text-gray-700 md:text-4xl">
             Eye-Tracking in Mobile UX Research
           </a>
           <p class="pt-3">
@@ -33,8 +33,8 @@
               OCT 27, 2021
             </span>
             <span class="text-xs text-gray-500">in</span>
-            <a href="{{ route('category-show', $category) }}"
-              class="pr-2 text-base font-medium text-gray-600 underline">
+            {{-- <a href="{{ route('category-show', $category) }}" --}}
+            <a href="" class="pr-2 text-base font-medium text-gray-600 underline">
               HTML5,
             </a>
 
