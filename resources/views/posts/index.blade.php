@@ -6,7 +6,8 @@
 
   <x-hero />
   <x-post-feature />
-  <x-posts-section />
+  <x-posts-section :categories="$categories" />
+
   <x-newsletter />
 
 

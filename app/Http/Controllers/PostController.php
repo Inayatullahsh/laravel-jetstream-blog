@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
+use Error;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,7 +16,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        // $categories = Category::has('posts', '>=', '3')->get();
+        $categories = Category::doesntHave('parent')->get();
+        // dd($categories);
+        error_log($categories);
+        return view('posts.index', compact('categories'));
     }
 
     /**
