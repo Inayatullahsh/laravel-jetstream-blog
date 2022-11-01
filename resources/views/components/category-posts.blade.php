@@ -12,8 +12,9 @@
       </svg>
     </a>
   </div>
-  <div class="grid grid-cols-1 py-10 justify-items-center md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-5 py-10 justify-items-center md:grid-cols-2 lg:grid-cols-3">
     @foreach ($category->posts as $post)
+
       <x-post-card :post="$post" />
     @endforeach
   </div>

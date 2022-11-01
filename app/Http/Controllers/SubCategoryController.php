@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Post;
-use Error;
+use App\Models\SubCategory;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class SubCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $categories = Category::has('posts', '>=', '3')->get();
-        
-        return view('posts.index', compact('categories'));
+        //
     }
 
     /**
@@ -45,22 +41,21 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\SubCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(SubCategory $subCategory)
     {
-        // return view('post show');
-        return view('posts.post-show');
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\SubCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(SubCategory $subCategory)
     {
         //
     }
@@ -69,10 +64,10 @@ class PostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\SubCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, SubCategory $subCategory)
     {
         //
     }
@@ -80,10 +75,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\SubCategory  $subCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(SubCategory $subCategory)
     {
         //
     }

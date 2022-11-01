@@ -20,7 +20,8 @@ class PostFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'category_id' => Category::factory(),
+            // 'category_id' => Category::factory(),
+            'category_id' => Category::all()->random(),
             'title' => $this->faker->sentence(),
             'slug' => $this->faker->slug(),
             'excerpt' => $this->faker->paragraph(),
